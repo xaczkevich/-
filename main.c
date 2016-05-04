@@ -32,7 +32,7 @@ int main(int argc, char* argv[])
 	char tempchar;
 
 	print_start(arrShu);
-	printf("How many answers do you want? (1-9)");
+	printf("How many answers? (1-9)");
 	tempchar = _getch();
 	if (tempchar >= '1' && tempchar <= '9')
 	{
@@ -54,7 +54,7 @@ int main(int argc, char* argv[])
 	}
 	else if (showNum > currNum)
 	{
-		printf("There is no more\n");
+		printf("There is no more answers\n");
 	}
 	printf("End\n");
 	_getch();
@@ -66,7 +66,7 @@ int test(int arr[])
 {
 	int result;
 	// 1: ответ найден
-	// 0: фигня или ответа нету
+	// 0: ошибка или ответа нету
 	int p[81];
 	int* p0;
 	int num;
@@ -100,7 +100,7 @@ int test(int arr[])
 			}
 			else
 			{
-				// фигня, попробуйте следующюю цифру
+				// ошибка, попробуйте следующюю цифру
 				continue;
 			}
 		}
@@ -169,7 +169,7 @@ void print_start(const int arr[][9])
 void print_result(const int arrS[][9], const int arrR[][9])
 {
 	int i, j;
-	//цукенгошлдлорм стоп машина
+	//
 	if (memchr_int(arrR, 0, 81))
 	{
 		printf("There is no result yet.\n");
