@@ -32,7 +32,7 @@ int main(int argc, char* argv[])
 	char tempchar;
 
 	print_start(arrShu);
-	printf("How many answers? (1-9)");
+	printf("How many answers do you want? (1-9)");
 	tempchar = _getch();
 	if (tempchar >= '1' && tempchar <= '9')
 	{
